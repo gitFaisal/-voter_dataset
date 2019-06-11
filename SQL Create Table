@@ -1,10 +1,11 @@
-CREATE TABLE voters(First_Name varchar(25),
-					Gender varchar(10),
-					State varchar(5),
-					DOB DATE,
-					AGE INT,
-					Voter_Id INT,
-					Voter_Score varchar(25));
+CREATE TABLE voters(first_name varchar(25),
+					gender varchar(10),
+					state varchar(5),
+					dob DATE,
+					age INT,
+					voter_id INT,
+					voter_score varchar(25));
+					
 					
 **After db table is populated...some simple SQL queries on our data**
 
@@ -12,6 +13,32 @@ CREATE TABLE voters(First_Name varchar(25),
 
 SELECT * FROM voters
 limit 10;
+
+**Summarize the total record count by state**
+
+SELECT state, count(state)
+FROM voters
+GROUP BY state;
+
+**Find the average age of people by state**
+
+SELECT state, ROUND(AVG(age),0)
+FROM voters
+group by state;
+
+**What is most common first name?**
+
+SELECT first_name, count(first_name)
+FROM voters
+GROUP BY first_name
+ORDER BY count(*) DESC 
+LIMIT 1;
+
+
+
+
+
+
 
 
 					
