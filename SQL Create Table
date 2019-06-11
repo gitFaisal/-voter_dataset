@@ -1,0 +1,17 @@
+CREATE TABLE voters(First_Name varchar(25),
+					Gender varchar(10),
+					State varchar(5),
+					DOB DATE,
+					AGE INT,
+					Voter_Id INT,
+					Voter_Score varchar(25));
+					
+**After db table is populated...some simple SQL queries on our data**
+
+**Check first 10 rows of data**
+
+SELECT * FROM voters
+limit 10;
+
+
+					
