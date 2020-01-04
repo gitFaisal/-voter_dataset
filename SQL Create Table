@@ -1,10 +1,10 @@
-CREATE TABLE voters(first_name varchar(25),
-					gender varchar(10),
-					state varchar(5),
-					dob DATE,
-					age INT,
-					voter_id INT,
-					voter_score varchar(25));
+CREATE TABLE voters(	first_name varchar(25),
+			gender varchar(10),
+			state varchar(5),
+			dob DATE,
+			age INT,
+			voter_id INT,
+			voter_score varchar(25));
 					
 					
 **After db table is populated...some simple SQL queries on our data**
